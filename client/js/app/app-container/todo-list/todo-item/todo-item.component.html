@@ -1,0 +1,9 @@
+<div class="l-todo-widget-itm" ng-class="{'l-todo-widget-itm_completed': $ctrl.isCompleted}">
+  <svg ng-click="$ctrl.toggleCompleted()" class="l-todo-widget-itm__complete">
+    <use xlink:href="assets/img/sprite.svg#complete"></use>
+  </svg>
+  <p class="l-todo-widget-itm__title">{{$ctrl.todoTitle}}</p>
+  <svg ng-click="$ctrl.removeTodo()" class="l-todo-widget-itm__remove">
+    <use xlink:href="assets/img/sprite.svg#cross"></use>
+  </svg>
+</div>

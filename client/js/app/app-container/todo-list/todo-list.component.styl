@@ -1,0 +1,116 @@
+.l-todo-widget
+  display: block
+  box-shadow: 0 0 10px 3px rgba(#000, .1)
+  border-radius: 5px
+  margin: (50/16)rem auto
+  width: (500/16)rem
+
+  &__title
+    text-align: center
+    line-height: 1
+    color: #666
+    font-weight: 300
+    padding: (10/16)rem 0
+
+  &-footer
+    padding: (10/16)rem (20/16)rem
+
+  &-type
+    display: inline-block
+    vertical-align: middle
+    list-style: none
+    font-size: 0
+
+    &__itm
+      font-size: (12/16)rem
+      font-weight: 300
+      display: inline-block
+      vertical-align: middle
+      margin: 0 (3/16)rem
+      border: 1px solid #ddd8d8
+      border-radius: 3px
+      padding: (3/16)rem (10/16)rem
+      cursor: pointer
+
+      &_selected
+        background-color: #f6f6f6
+        cursor: default
+
+  &-search
+    display: inline-block
+    vertical-align: middle
+    margin-left: (50/16)rem
+
+    &__input
+      font-size: (14/16)rem
+      padding: 0 (20/16)rem
+      border-bottom: 1px solid #ddd8d8
+
+      &::placeholder
+        color: #999
+        font-style: italic
+
+  &-field
+    &__input
+      border-top: 1px solid #ddd8d8
+      background-color: #fff
+      height: (40/16)rem
+      padding: 0 (20/16)rem
+      border-bottom: @border-top
+      width: 100%
+
+      &:focus
+        background-color: #f6f6f6
+
+      &::placeholder
+        color: #999
+        font-style: italic
+
+  &-lst
+    display: block
+
+  &-itm
+    display: block
+    position: relative
+    font-size: 0
+    font-weight: 300
+    border-bottom: 1px solid #ddd8d8
+    padding: (5/16)rem (10/16)rem
+
+    &_completed &__title
+      text-decoration: line-through
+      color: #666
+
+    &__complete
+      display: inline-block
+      vertical-align: middle
+      width: (20/16)rem
+      height: @width
+      cursor: pointer
+      fill: #333
+      opacity: .5
+
+    &_completed &__complete
+    &__complete:hover
+      fill: green
+      opacity: 1
+
+    &__title
+      font-size: (14/16)rem
+      margin: 0 (10px/16)rem
+      display: inline-block
+      vertical-align: middle
+
+    &__remove
+      display: block
+      position: absolute
+      top: (10/16)rem
+      right: (20/16)rem
+      width: (10/16)rem
+      height: @width
+      fill: red
+      cursor: pointer
+      opacity: .7
+
+      &:hover
+        opacity: 1

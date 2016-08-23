@@ -1,0 +1,44 @@
+<div ng-submit="$ctrl.addTodo($event)">
+  <h1 class="l-todo-widget__title">TODO:</h1>
+  <form class="l-todo-widget-field">
+    <input class="l-todo-widget-field__input" ng-model="$ctrl.newTodo" type="text" placeholder="Enter your task..." />
+  </form>
+
+  <div class="l-todo-widget-lst" ng-repeat="todoItem in $ctrl.todoList | filter:$ctrl.searchQuery track by todoItem.id">
+    <todo-item
+      is-completed="todoItem.completed"
+      todo-title="todoItem.title"
+      toggle-completed="$ctrl.toggleCompleted(todoItem.id)"
+      remove-todo="$ctrl.removeTodo(todoItem.id)"
+    />
+  </div>
+
+  <div class="l-todo-widget-footer">
+    <ul class="l-todo-widget-type">
+      <li
+        ng-class="{'l-todo-widget-type__itm_selected': $ctrl.currentType === 'all'}"
+        ng-click="$ctrl.changeType('all')"
+        class="l-todo-widget-type__itm l-todo-widget-type__itm_all">
+          all
+      </li>
+
+      <li
+        ng-class="{'l-todo-widget-type__itm_selected': $ctrl.currentType === 'completed'}"
+        ng-click="$ctrl.changeType('completed')"
+        class="l-todo-widget-type__itm l-todo-widget-type__itm_completed">
+          completed
+      </li>
+
+      <li
+        ng-class="{'l-todo-widget-type__itm_selected': $ctrl.currentType === 'active'}"
+        ng-click="$ctrl.changeType('active')"
+        class="l-todo-widget-type__itm l-todo-widget-type__itm_active">
+          active
+      </li>
+    </ul>
+
+    <p class="l-todo-widget-search">
+      <input class="l-todo-widget-search__input" ng-model="$ctrl.searchQuery.title" type="text" placeholder="Search..." />
+    </p>
+  </div>
+</div>
