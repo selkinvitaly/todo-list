@@ -1,0 +1,49 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "The test task for sletat.ru",
+  "scripts": {
+    "build:clean": "./node_modules/.bin/gulp build:clean",
+    "build:watch": "WATCH=true ./node_modules/.bin/gulp build:watch"
+  },
+  "main": "client/js/app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selkinvitaly/todo-list.git"
+  },
+  "author": "Selkin Vitaly <contact@selkinvitaly.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/selkinvitaly/todo-list/issues"
+  },
+  "homepage": "https://github.com/selkinvitaly/todo-list",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.13.2",
+    "browser-sync": "^2.12.10",
+    "config": "^1.21.0",
+    "css-loader": "^0.23.1",
+    "del": "^2.2.0",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-csscomb": "^3.0.7",
+    "gulp-if": "^2.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.4.0",
+    "gulp-svg-sprite": "^1.3.1",
+    "gulp-util": "^3.0.7",
+    "html-loader": "^0.4.3",
+    "postcss-loader": "^0.9.1",
+    "style-loader": "^0.13.1",
+    "stylus-loader": "^2.1.0",
+    "webpack": "^2.1.0-beta.8"
+  },
+  "private": true,
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}
